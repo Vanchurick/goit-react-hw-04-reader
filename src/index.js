@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Redirect } from 'react-router-dom';
 import Reader from './components/Reader/Reader';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter basename="/">
     <Route component={Reader} />
     <Redirect to="/articles?item=1" />
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root'),
 );
